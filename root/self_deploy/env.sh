@@ -17,7 +17,7 @@ NETWORK_CHECK_LOG_SIZE=$((1024*1024)) # 1024k=1M
 # 执行日志
 DDNS_PID_NAME="dynamic_dns_updater"
 DDNS_SERVICE="/etc/init.d/ddns"
-DDNS_CHECK_LOG_FILE="${LOG_DIR}/ddns_check.log"
+DDNS_CHECK_LOG_FILE="${LOG_DIR}/ddns_self_guard.log"
 DDNS_CHECK_LOG_SIZE=$((1024*1024))
 
 # Functions

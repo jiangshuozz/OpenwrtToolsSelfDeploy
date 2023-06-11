@@ -13,7 +13,7 @@ if [ ! -d "$SELF_DEPLOY_DIR" ]; then
 fi
 
 # 清除定时任务
-sed -i "/ddns_check/d" $CRONTAB_FILE
+sed -i "/ddns_self_guard/d" $CRONTAB_FILE
 sed -i "/network_self_guard/d" $CRONTAB_FILE
 # 清除安装目录及文件
 rm -rf $SELF_DEPLOY_DIR

@@ -16,8 +16,8 @@ cp -r ./root/self_deploy/* $SELF_DEPLOY_DIR
 chmod +x $SELF_DEPLOY_DIR/*.sh # 添加执行权限
 
 # 加入定时任务
-sed -i "/ddns_check/d" $CRONTAB_FILE
-echo "10 * * * * $SELF_DEPLOY_DIR/ddns_check.sh" >> $CRONTAB_FILE
+sed -i "/ddns_self_guard/d" $CRONTAB_FILE
+echo "10 * * * * $SELF_DEPLOY_DIR/ddns_self_guard.sh" >> $CRONTAB_FILE
 
 sed -i "/network_self_guard/d" $CRONTAB_FILE
 echo "5 * * * * $SELF_DEPLOY_DIR/network_self_guard.sh" >> $CRONTAB_FILE
