@@ -32,7 +32,6 @@ COUNTER=$(cat $NETWORK_CHECK_COUNTER_FILE)
 # 检测网络连接函数
 function check_network() {
     # 如果ping 6次至少有2次包未响应，则执行一下代码
-    echo $(ping_domain) = "false"
     if [ $(ping_domain) = "false" ]; then
         # 如果无法连接网络，则重启wan口拨号
         echo_log_with_stamp "网络连接失败 重启Wan" $NETWORK_CHECK_LOG_FILE
