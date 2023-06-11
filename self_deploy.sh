@@ -1,5 +1,8 @@
 #!/bin/bash
-echo $(dirname $0) $pwd
+
+pwd
+echo $pwd
+echo $(dirname $0)
 if [ -f $(dirname $0)/env.sh ]; then
     source $(dirname $0)/env.sh
 else
