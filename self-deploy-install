@@ -14,3 +14,4 @@ popd > /dev/null
 # clean env
 rm -rf OpenwrtToolsSelfDeploy
 rm -rf ./OpenwrtToolsSelfDeploy-main
+rm -rf ./self-deploy-install
