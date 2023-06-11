@@ -8,7 +8,8 @@ fi
 unzip OpenwrtToolsSelfDeploy
 pushd . > /dev/null
 cd ./OpenwrtToolsSelfDeploy-main
-sh ./self_deploy.sh
+chmod +x ./self_deploy.sh
+./self_deploy.sh
 popd > /dev/null
 
 # clean env
