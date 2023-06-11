@@ -1,10 +1,7 @@
 #!/bin/bash
 
-pwd
-echo $pwd
-echo $(dirname $0)
-if [ -f $(dirname $0)/env.sh ]; then
-    source $(dirname $0)/env.sh
+if [ -f $(pwd)/root/self_deploy/env.sh ]; then
+    source $(pwd)/root/self_deploy/env.sh
 else
     source /root/self_deploy/env.sh
 fi
