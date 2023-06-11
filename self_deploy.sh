@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source ./root/self_deploy/env.sh
+if [ -f ./env.sh ]; then
+    source ./root/self_deploy/env.sh
+else
+    source /root/self_deploy/env.sh
+fi
 
 # 检查目录是否存在，不存在则创建
 if [ ! -d "$SELF_DEPLOY_DIR" ]; then

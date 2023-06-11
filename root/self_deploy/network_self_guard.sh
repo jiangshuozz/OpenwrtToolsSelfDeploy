@@ -3,7 +3,7 @@
 if [ -f ./env.sh ]; then
     source ./env.sh
 else
-    source $SELF_DEPLOY_DIR/env.sh
+    source /root/self_deploy/env.sh
 fi
 
 # 默认计数为0
