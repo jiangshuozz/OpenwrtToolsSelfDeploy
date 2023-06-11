@@ -16,4 +16,4 @@ fi
 sed -i "/ddns_check/d" $CRONTAB_FILE
 sed -i "/network_self_guard/d" $CRONTAB_FILE
 # 清除安装目录及文件
-cp -rf $SELF_DEPLOY_DIR
+rm -rf $SELF_DEPLOY_DIR
