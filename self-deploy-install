@@ -1,0 +1,16 @@
+#!/bin/bash
+
+wget https://github.com/jiangshuozz/OpenwrtToolsSelfDeploy/archive/refs/heads/main.zip -O OpenwrtToolsSelfDeploy
+if [ $? != 0 ];then
+    echo "Download fail! PLease try again after 10 seconds!"
+    exit $?
+fi
+unzip OpenwrtToolsSelfDeploy
+pushd . > /dev/null
+cd ./OpenwrtToolsSelfDeploy-main
+sh ./self_deploy.sh
+popd > /dev/null
+
+# clean env
+rm -rf OpenwrtToolsSelfDeploy
+rm -rf ./OpenwrtToolsSelfDeploy-main
