@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f ./env.sh ]; then
-    source ./root/self_deploy/env.sh
+if [ -f $(pwd)/root/self_deploy/env.sh ]; then
+    source $(pwd)/root/self_deploy/env.sh
 else
     source /root/self_deploy/env.sh
 fi
