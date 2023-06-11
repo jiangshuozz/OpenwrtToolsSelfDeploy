@@ -1,5 +1,10 @@
 #!/bin/bash
-source ./env.sh
+
+if [ -f ./env.sh ]; then
+    source ./env.sh
+else
+    source $SELF_DEPLOY_DIR/env.sh
+fi
 
 # 默认计数为0
 COUNTER=0

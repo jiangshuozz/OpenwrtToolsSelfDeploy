@@ -1,5 +1,10 @@
 #!/bin/bash
-source ./env.sh
+
+if [ -f ./env.sh ]; then
+    source ./env.sh
+else
+    source $SELF_DEPLOY_DIR/env.sh
+fi
 
 # 检查目录是否存在，不存在则创建
 if [ ! -d "$LOG_DIR" ]; then
